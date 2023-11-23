@@ -1,0 +1,4 @@
+D:\Programs\CPlusPlus\ChMLabs\KateLab\KateLab\x64\Debug\KateLab.vcxproj.AssemblyReference.cache
+D:\Programs\CPlusPlus\ChMLabs\KateLab\KateLab\x64\Debug\KateLab.vcxproj.SuggestedBindingRedirects.cache
+D:\Programs\CPlusPlus\ChMLabs\KateLab\KateLab\x64\Debug\KateLab.MainForm.resources
+D:\Programs\CPlusPlus\ChMLabs\KateLab\KateLab\x64\Debug\KateLab.vcxproj.GenerateResource.cache
