@@ -204,6 +204,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxC
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
 private: System::Windows::Forms::TabPage^ tabPage9;
 private: System::Windows::Forms::WebBrowser^ webBrowser2;
+private: System::Windows::Forms::CheckBox^ constStepCheckBox;
+private: System::Windows::Forms::TextBox^ nTextBox;
+
+private: System::Windows::Forms::Label^ label5;
 
 
 
@@ -420,19 +424,19 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea10 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend10 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series10 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Title^ title10 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea11 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend11 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series11 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Title^ title11 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
-			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea12 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
-			System::Windows::Forms::DataVisualization::Charting::Legend^ legend12 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
-			System::Windows::Forms::DataVisualization::Charting::Series^ series12 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			System::Windows::Forms::DataVisualization::Charting::Title^ title12 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea4 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title4 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea5 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title5 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
+			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea6 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
+			System::Windows::Forms::DataVisualization::Charting::Legend^ legend6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
+			System::Windows::Forms::DataVisualization::Charting::Series^ series6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
+			System::Windows::Forms::DataVisualization::Charting::Title^ title6 = (gcnew System::Windows::Forms::DataVisualization::Charting::Title());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->iterNumber = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabControl2 = (gcnew System::Windows::Forms::TabControl());
@@ -441,8 +445,26 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->tabControl3 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage7 = (gcnew System::Windows::Forms::TabPage());
 			this->outVDataGridView = (gcnew System::Windows::Forms::DataGridView());
+			this->i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->ti = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->xi = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->hi = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->vi_v2i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->OLP1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage8 = (gcnew System::Windows::Forms::TabPage());
 			this->outVshDdataGridView = (gcnew System::Windows::Forms::DataGridView());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->uxChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
@@ -452,8 +474,10 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->vvChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->nTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->constStepCheckBox = (gcnew System::Windows::Forms::CheckBox());
 			this->maxIterTextBox = (gcnew System::Windows::Forms::TextBox());
-			this->startButton = (gcnew System::Windows::Forms::Button());
 			this->epsTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->hTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -463,6 +487,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->x0TextBox = (gcnew System::Windows::Forms::TextBox());
+			this->startButton = (gcnew System::Windows::Forms::Button());
 			this->mTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->label21 = (gcnew System::Windows::Forms::Label());
 			this->kTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -480,24 +505,6 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->spravkaRichTextBox = (gcnew System::Windows::Forms::RichTextBox());
 			this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
 			this->webBrowser1 = (gcnew System::Windows::Forms::WebBrowser());
-			this->i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->ti = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->xi = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->hi = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->vi_v2i = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->OLP1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage9 = (gcnew System::Windows::Forms::TabPage());
 			this->webBrowser2 = (gcnew System::Windows::Forms::WebBrowser());
 			this->tabControl2->SuspendLayout();
@@ -620,6 +627,53 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->outVDataGridView->Size = System::Drawing::Size(636, 551);
 			this->outVDataGridView->TabIndex = 0;
 			// 
+			// i
+			// 
+			dataGridViewCellStyle2->NullValue = nullptr;
+			this->i->DefaultCellStyle = dataGridViewCellStyle2;
+			this->i->HeaderText = L"i";
+			this->i->Name = L"i";
+			// 
+			// ti
+			// 
+			this->ti->HeaderText = L"x[i]";
+			this->ti->Name = L"ti";
+			// 
+			// xi
+			// 
+			this->xi->HeaderText = L"v[i]";
+			this->xi->Name = L"xi";
+			// 
+			// Column7
+			// 
+			this->Column7->HeaderText = L"v^[i]";
+			this->Column7->Name = L"Column7";
+			// 
+			// hi
+			// 
+			this->hi->HeaderText = L"h[i]";
+			this->hi->Name = L"hi";
+			// 
+			// vi_v2i
+			// 
+			this->vi_v2i->HeaderText = L"v^[i]-v[i]";
+			this->vi_v2i->Name = L"vi_v2i";
+			// 
+			// OLP1
+			// 
+			this->OLP1->HeaderText = L"ОЛП";
+			this->OLP1->Name = L"OLP1";
+			// 
+			// Column8
+			// 
+			this->Column8->HeaderText = L"C1";
+			this->Column8->Name = L"Column8";
+			// 
+			// Column9
+			// 
+			this->Column9->HeaderText = L"C2";
+			this->Column9->Name = L"Column9";
+			// 
 			// tabPage8
 			// 
 			this->tabPage8->Controls->Add(this->outVshDdataGridView);
@@ -644,6 +698,51 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->outVshDdataGridView->Name = L"outVshDdataGridView";
 			this->outVshDdataGridView->Size = System::Drawing::Size(636, 551);
 			this->outVshDdataGridView->TabIndex = 0;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"i";
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"x[i]";
+			this->Column2->Name = L"Column2";
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"v\'[i]";
+			this->Column3->Name = L"Column3";
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this->dataGridViewTextBoxColumn1->HeaderText = L"v\'^[i]";
+			this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"h[i]";
+			this->Column4->Name = L"Column4";
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"v\'^[i]-v\'[i]";
+			this->Column5->Name = L"Column5";
+			// 
+			// Column6
+			// 
+			this->Column6->HeaderText = L"ОЛП";
+			this->Column6->Name = L"Column6";
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this->dataGridViewTextBoxColumn2->HeaderText = L"C1";
+			this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this->dataGridViewTextBoxColumn3->HeaderText = L"C2";
+			this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
 			// 
 			// tabControl1
 			// 
@@ -670,38 +769,38 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// uxChart
 			// 
-			chartArea10->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
-			chartArea10->AxisX->Title = L"Время x";
-			chartArea10->AxisX->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			chartArea4->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
+			chartArea4->AxisX->Title = L"Время x";
+			chartArea4->AxisX->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			chartArea10->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
-			chartArea10->AxisY->Title = L"Координата u";
-			chartArea10->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			chartArea4->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
+			chartArea4->AxisY->Title = L"Координата u";
+			chartArea4->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			chartArea10->Name = L"ChartArea1";
-			this->uxChart->ChartAreas->Add(chartArea10);
+			chartArea4->Name = L"ChartArea1";
+			this->uxChart->ChartAreas->Add(chartArea4);
 			this->uxChart->Dock = System::Windows::Forms::DockStyle::Fill;
-			legend10->Name = L"Legend1";
-			this->uxChart->Legends->Add(legend10);
+			legend4->Name = L"Legend1";
+			this->uxChart->Legends->Add(legend4);
 			this->uxChart->Location = System::Drawing::Point(3, 3);
 			this->uxChart->Name = L"uxChart";
-			series10->BorderColor = System::Drawing::Color::White;
-			series10->BorderWidth = 2;
-			series10->ChartArea = L"ChartArea1";
-			series10->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series10->Color = System::Drawing::Color::Red;
-			series10->IsVisibleInLegend = false;
-			series10->Legend = L"Legend1";
-			series10->Name = L"Series1";
-			this->uxChart->Series->Add(series10);
+			series4->BorderColor = System::Drawing::Color::White;
+			series4->BorderWidth = 2;
+			series4->ChartArea = L"ChartArea1";
+			series4->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series4->Color = System::Drawing::Color::Red;
+			series4->IsVisibleInLegend = false;
+			series4->Legend = L"Legend1";
+			series4->Name = L"Series1";
+			this->uxChart->Series->Add(series4);
 			this->uxChart->Size = System::Drawing::Size(656, 551);
 			this->uxChart->TabIndex = 0;
 			this->uxChart->Text = L"chart1";
-			title10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+			title4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			title10->Name = L"Title1";
-			title10->Text = L"Зависимость координаты от времени";
-			this->uxChart->Titles->Add(title10);
+			title4->Name = L"Title1";
+			title4->Text = L"Зависимость координаты от времени";
+			this->uxChart->Titles->Add(title4);
 			// 
 			// tabPage3
 			// 
@@ -716,38 +815,38 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// ushxChart
 			// 
-			chartArea11->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
-			chartArea11->AxisX->Title = L"Время x";
-			chartArea11->AxisX->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			chartArea5->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
+			chartArea5->AxisX->Title = L"Время x";
+			chartArea5->AxisX->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			chartArea11->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
-			chartArea11->AxisY->Title = L"Скорость u\'";
-			chartArea11->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			chartArea5->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
+			chartArea5->AxisY->Title = L"Скорость u\'";
+			chartArea5->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			chartArea11->Name = L"ChartArea1";
-			this->ushxChart->ChartAreas->Add(chartArea11);
+			chartArea5->Name = L"ChartArea1";
+			this->ushxChart->ChartAreas->Add(chartArea5);
 			this->ushxChart->Dock = System::Windows::Forms::DockStyle::Fill;
-			legend11->Name = L"Legend1";
-			this->ushxChart->Legends->Add(legend11);
+			legend5->Name = L"Legend1";
+			this->ushxChart->Legends->Add(legend5);
 			this->ushxChart->Location = System::Drawing::Point(3, 3);
 			this->ushxChart->Name = L"ushxChart";
-			series11->BorderWidth = 2;
-			series11->ChartArea = L"ChartArea1";
-			series11->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series11->Color = System::Drawing::Color::Red;
-			series11->IsVisibleInLegend = false;
-			series11->IsXValueIndexed = true;
-			series11->Legend = L"Legend1";
-			series11->Name = L"Series1";
-			this->ushxChart->Series->Add(series11);
+			series5->BorderWidth = 2;
+			series5->ChartArea = L"ChartArea1";
+			series5->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series5->Color = System::Drawing::Color::Red;
+			series5->IsVisibleInLegend = false;
+			series5->IsXValueIndexed = true;
+			series5->Legend = L"Legend1";
+			series5->Name = L"Series1";
+			this->ushxChart->Series->Add(series5);
 			this->ushxChart->Size = System::Drawing::Size(656, 551);
 			this->ushxChart->TabIndex = 0;
 			this->ushxChart->Text = L"chart2";
-			title11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+			title5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			title11->Name = L"Title1";
-			title11->Text = L"Зависимость скорости от времени";
-			this->ushxChart->Titles->Add(title11);
+			title5->Name = L"Title1";
+			title5->Text = L"Зависимость скорости от времени";
+			this->ushxChart->Titles->Add(title5);
 			// 
 			// tabPage4
 			// 
@@ -761,40 +860,40 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// vvChart
 			// 
-			chartArea12->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
-			chartArea12->AxisX->Title = L"Координата u";
-			chartArea12->AxisX->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			chartArea6->AxisX->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
+			chartArea6->AxisX->Title = L"Координата u";
+			chartArea6->AxisX->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			chartArea12->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
-			chartArea12->AxisY->Title = L"Скорость u\'";
-			chartArea12->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			chartArea6->AxisY->ArrowStyle = System::Windows::Forms::DataVisualization::Charting::AxisArrowStyle::SharpTriangle;
+			chartArea6->AxisY->Title = L"Скорость u\'";
+			chartArea6->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			chartArea12->Name = L"ChartArea1";
-			this->vvChart->ChartAreas->Add(chartArea12);
+			chartArea6->Name = L"ChartArea1";
+			this->vvChart->ChartAreas->Add(chartArea6);
 			this->vvChart->Dock = System::Windows::Forms::DockStyle::Fill;
-			legend12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			legend6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			legend12->IsTextAutoFit = false;
-			legend12->Name = L"Legend1";
-			this->vvChart->Legends->Add(legend12);
+			legend6->IsTextAutoFit = false;
+			legend6->Name = L"Legend1";
+			this->vvChart->Legends->Add(legend6);
 			this->vvChart->Location = System::Drawing::Point(0, 0);
 			this->vvChart->Name = L"vvChart";
-			series12->BorderWidth = 2;
-			series12->ChartArea = L"ChartArea1";
-			series12->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
-			series12->Color = System::Drawing::Color::Red;
-			series12->IsVisibleInLegend = false;
-			series12->Legend = L"Legend1";
-			series12->Name = L"Series1";
-			this->vvChart->Series->Add(series12);
+			series6->BorderWidth = 2;
+			series6->ChartArea = L"ChartArea1";
+			series6->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Spline;
+			series6->Color = System::Drawing::Color::Red;
+			series6->IsVisibleInLegend = false;
+			series6->Legend = L"Legend1";
+			series6->Name = L"Series1";
+			this->vvChart->Series->Add(series6);
 			this->vvChart->Size = System::Drawing::Size(662, 557);
 			this->vvChart->TabIndex = 0;
 			this->vvChart->Text = L"vvChart";
-			title12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+			title6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			title12->Name = L"Title1";
-			title12->Text = L"Фозовая плоскость";
-			this->vvChart->Titles->Add(title12);
+			title6->Name = L"Title1";
+			title6->Text = L"Фозовая плоскость";
+			this->vvChart->Titles->Add(title6);
 			// 
 			// panel1
 			// 
@@ -811,8 +910,10 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// panel2
 			// 
 			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel2->Controls->Add(this->nTextBox);
+			this->panel2->Controls->Add(this->label5);
+			this->panel2->Controls->Add(this->constStepCheckBox);
 			this->panel2->Controls->Add(this->maxIterTextBox);
-			this->panel2->Controls->Add(this->startButton);
 			this->panel2->Controls->Add(this->epsTextBox);
 			this->panel2->Controls->Add(this->label1);
 			this->panel2->Controls->Add(this->hTextBox);
@@ -825,38 +926,55 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->panel2->Size = System::Drawing::Size(520, 209);
 			this->panel2->TabIndex = 58;
 			// 
+			// nTextBox
+			// 
+			this->nTextBox->Location = System::Drawing::Point(143, 165);
+			this->nTextBox->Name = L"nTextBox";
+			this->nTextBox->Size = System::Drawing::Size(45, 26);
+			this->nTextBox->TabIndex = 59;
+			this->nTextBox->Text = L"100";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(29, 168);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(108, 20);
+			this->label5->TabIndex = 58;
+			this->label5->Text = L"Число шагов";
+			// 
+			// constStepCheckBox
+			// 
+			this->constStepCheckBox->AutoSize = true;
+			this->constStepCheckBox->Location = System::Drawing::Point(33, 129);
+			this->constStepCheckBox->Name = L"constStepCheckBox";
+			this->constStepCheckBox->Size = System::Drawing::Size(155, 24);
+			this->constStepCheckBox->TabIndex = 57;
+			this->constStepCheckBox->Text = L"Постоянный шаг";
+			this->constStepCheckBox->UseVisualStyleBackColor = true;
+			// 
 			// maxIterTextBox
 			// 
-			this->maxIterTextBox->Location = System::Drawing::Point(278, 111);
+			this->maxIterTextBox->Location = System::Drawing::Point(278, 96);
 			this->maxIterTextBox->Name = L"maxIterTextBox";
 			this->maxIterTextBox->Size = System::Drawing::Size(218, 26);
 			this->maxIterTextBox->TabIndex = 56;
 			this->maxIterTextBox->Text = L"100000";
 			// 
-			// startButton
-			// 
-			this->startButton->Location = System::Drawing::Point(167, 152);
-			this->startButton->Name = L"startButton";
-			this->startButton->Size = System::Drawing::Size(185, 47);
-			this->startButton->TabIndex = 57;
-			this->startButton->Text = L"Старт";
-			this->startButton->UseVisualStyleBackColor = true;
-			this->startButton->Click += gcnew System::EventHandler(this, &MainForm::startButton_Click);
-			// 
 			// epsTextBox
 			// 
-			this->epsTextBox->Location = System::Drawing::Point(33, 112);
+			this->epsTextBox->Location = System::Drawing::Point(33, 97);
 			this->epsTextBox->Name = L"epsTextBox";
 			this->epsTextBox->Size = System::Drawing::Size(218, 26);
 			this->epsTextBox->TabIndex = 48;
-			this->epsTextBox->Text = L"0,00001";
+			this->epsTextBox->Text = L"0,001";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label1->Location = System::Drawing::Point(29, 25);
+			this->label1->Location = System::Drawing::Point(29, 10);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(225, 20);
 			this->label1->TabIndex = 12;
@@ -864,7 +982,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// hTextBox
 			// 
-			this->hTextBox->Location = System::Drawing::Point(278, 47);
+			this->hTextBox->Location = System::Drawing::Point(278, 32);
 			this->hTextBox->Name = L"hTextBox";
 			this->hTextBox->Size = System::Drawing::Size(218, 26);
 			this->hTextBox->TabIndex = 55;
@@ -875,7 +993,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(29, 89);
+			this->label2->Location = System::Drawing::Point(29, 74);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(222, 20);
 			this->label2->TabIndex = 13;
@@ -883,7 +1001,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// epsGrTextBox
 			// 
-			this->epsGrTextBox->Location = System::Drawing::Point(33, 48);
+			this->epsGrTextBox->Location = System::Drawing::Point(33, 33);
 			this->epsGrTextBox->Name = L"epsGrTextBox";
 			this->epsGrTextBox->Size = System::Drawing::Size(218, 26);
 			this->epsGrTextBox->TabIndex = 54;
@@ -894,7 +1012,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label3->Location = System::Drawing::Point(274, 24);
+			this->label3->Location = System::Drawing::Point(274, 9);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(166, 20);
 			this->label3->TabIndex = 52;
@@ -905,7 +1023,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label4->Location = System::Drawing::Point(274, 88);
+			this->label4->Location = System::Drawing::Point(274, 73);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(222, 20);
 			this->label4->TabIndex = 53;
@@ -914,6 +1032,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// groupBox1
 			// 
 			this->groupBox1->Controls->Add(this->x0TextBox);
+			this->groupBox1->Controls->Add(this->startButton);
 			this->groupBox1->Controls->Add(this->mTextBox);
 			this->groupBox1->Controls->Add(this->label21);
 			this->groupBox1->Controls->Add(this->kTextBox);
@@ -939,15 +1058,25 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// x0TextBox
 			// 
-			this->x0TextBox->Location = System::Drawing::Point(38, 44);
+			this->x0TextBox->Location = System::Drawing::Point(38, 28);
 			this->x0TextBox->Name = L"x0TextBox";
 			this->x0TextBox->Size = System::Drawing::Size(100, 26);
 			this->x0TextBox->TabIndex = 44;
 			this->x0TextBox->Text = L"0";
 			// 
+			// startButton
+			// 
+			this->startButton->Location = System::Drawing::Point(61, 165);
+			this->startButton->Name = L"startButton";
+			this->startButton->Size = System::Drawing::Size(185, 47);
+			this->startButton->TabIndex = 57;
+			this->startButton->Text = L"Старт";
+			this->startButton->UseVisualStyleBackColor = true;
+			this->startButton->Click += gcnew System::EventHandler(this, &MainForm::startButton_Click);
+			// 
 			// mTextBox
 			// 
-			this->mTextBox->Location = System::Drawing::Point(180, 61);
+			this->mTextBox->Location = System::Drawing::Point(187, 25);
 			this->mTextBox->Name = L"mTextBox";
 			this->mTextBox->Size = System::Drawing::Size(100, 26);
 			this->mTextBox->TabIndex = 49;
@@ -956,7 +1085,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// label21
 			// 
 			this->label21->AutoSize = true;
-			this->label21->Location = System::Drawing::Point(154, 99);
+			this->label21->Location = System::Drawing::Point(161, 63);
 			this->label21->Name = L"label21";
 			this->label21->Size = System::Drawing::Size(17, 20);
 			this->label21->TabIndex = 42;
@@ -964,7 +1093,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// kTextBox
 			// 
-			this->kTextBox->Location = System::Drawing::Point(180, 131);
+			this->kTextBox->Location = System::Drawing::Point(187, 95);
 			this->kTextBox->Name = L"kTextBox";
 			this->kTextBox->Size = System::Drawing::Size(100, 26);
 			this->kTextBox->TabIndex = 51;
@@ -972,7 +1101,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// u00TtextBox
 			// 
-			this->u00TtextBox->Location = System::Drawing::Point(38, 114);
+			this->u00TtextBox->Location = System::Drawing::Point(38, 98);
 			this->u00TtextBox->Name = L"u00TtextBox";
 			this->u00TtextBox->Size = System::Drawing::Size(100, 26);
 			this->u00TtextBox->TabIndex = 46;
@@ -981,7 +1110,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// label20
 			// 
 			this->label20->AutoSize = true;
-			this->label20->Location = System::Drawing::Point(7, 117);
+			this->label20->Location = System::Drawing::Point(7, 101);
 			this->label20->Name = L"label20";
 			this->label20->Size = System::Drawing::Size(27, 20);
 			this->label20->TabIndex = 37;
@@ -990,7 +1119,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// label17
 			// 
 			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(3, 152);
+			this->label17->Location = System::Drawing::Point(3, 136);
 			this->label17->Name = L"label17";
 			this->label17->Size = System::Drawing::Size(30, 20);
 			this->label17->TabIndex = 38;
@@ -1000,7 +1129,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			this->label22->AccessibleDescription = L"Поапаоао";
 			this->label22->AutoSize = true;
-			this->label22->Location = System::Drawing::Point(154, 64);
+			this->label22->Location = System::Drawing::Point(161, 28);
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(22, 20);
 			this->label22->TabIndex = 41;
@@ -1008,16 +1137,16 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// xTextBox
 			// 
-			this->xTextBox->Location = System::Drawing::Point(38, 79);
+			this->xTextBox->Location = System::Drawing::Point(38, 63);
 			this->xTextBox->Name = L"xTextBox";
 			this->xTextBox->Size = System::Drawing::Size(100, 26);
 			this->xTextBox->TabIndex = 45;
-			this->xTextBox->Text = L"1";
+			this->xTextBox->Text = L"10";
 			// 
 			// label19
 			// 
 			this->label19->AutoSize = true;
-			this->label19->Location = System::Drawing::Point(155, 134);
+			this->label19->Location = System::Drawing::Point(162, 98);
 			this->label19->Name = L"label19";
 			this->label19->Size = System::Drawing::Size(17, 20);
 			this->label19->TabIndex = 43;
@@ -1025,7 +1154,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// cTextBox
 			// 
-			this->cTextBox->Location = System::Drawing::Point(180, 96);
+			this->cTextBox->Location = System::Drawing::Point(187, 60);
 			this->cTextBox->Name = L"cTextBox";
 			this->cTextBox->Size = System::Drawing::Size(100, 26);
 			this->cTextBox->TabIndex = 50;
@@ -1034,7 +1163,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// label23
 			// 
 			this->label23->AutoSize = true;
-			this->label23->Location = System::Drawing::Point(8, 47);
+			this->label23->Location = System::Drawing::Point(8, 31);
 			this->label23->Name = L"label23";
 			this->label23->Size = System::Drawing::Size(25, 20);
 			this->label23->TabIndex = 36;
@@ -1043,7 +1172,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// label18
 			// 
 			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(12, 79);
+			this->label18->Location = System::Drawing::Point(12, 63);
 			this->label18->Name = L"label18";
 			this->label18->Size = System::Drawing::Size(16, 20);
 			this->label18->TabIndex = 39;
@@ -1051,7 +1180,7 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			// 
 			// u01TextBox
 			// 
-			this->u01TextBox->Location = System::Drawing::Point(38, 149);
+			this->u01TextBox->Location = System::Drawing::Point(38, 133);
 			this->u01TextBox->Name = L"u01TextBox";
 			this->u01TextBox->Size = System::Drawing::Size(100, 26);
 			this->u01TextBox->TabIndex = 47;
@@ -1104,98 +1233,6 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 			this->webBrowser1->Size = System::Drawing::Size(1324, 818);
 			this->webBrowser1->TabIndex = 0;
 			this->webBrowser1->Url = (gcnew System::Uri(L"", System::UriKind::Relative));
-			// 
-			// i
-			// 
-			dataGridViewCellStyle4->NullValue = nullptr;
-			this->i->DefaultCellStyle = dataGridViewCellStyle4;
-			this->i->HeaderText = L"i";
-			this->i->Name = L"i";
-			// 
-			// ti
-			// 
-			this->ti->HeaderText = L"x[i]";
-			this->ti->Name = L"ti";
-			// 
-			// xi
-			// 
-			this->xi->HeaderText = L"v[i]";
-			this->xi->Name = L"xi";
-			// 
-			// Column7
-			// 
-			this->Column7->HeaderText = L"v^[i]";
-			this->Column7->Name = L"Column7";
-			// 
-			// hi
-			// 
-			this->hi->HeaderText = L"h[i]";
-			this->hi->Name = L"hi";
-			// 
-			// vi_v2i
-			// 
-			this->vi_v2i->HeaderText = L"v^[i]-v[i]";
-			this->vi_v2i->Name = L"vi_v2i";
-			// 
-			// OLP1
-			// 
-			this->OLP1->HeaderText = L"ОЛП";
-			this->OLP1->Name = L"OLP1";
-			// 
-			// Column8
-			// 
-			this->Column8->HeaderText = L"C1";
-			this->Column8->Name = L"Column8";
-			// 
-			// Column9
-			// 
-			this->Column9->HeaderText = L"C2";
-			this->Column9->Name = L"Column9";
-			// 
-			// Column1
-			// 
-			this->Column1->HeaderText = L"i";
-			this->Column1->Name = L"Column1";
-			// 
-			// Column2
-			// 
-			this->Column2->HeaderText = L"x[i]";
-			this->Column2->Name = L"Column2";
-			// 
-			// Column3
-			// 
-			this->Column3->HeaderText = L"v\'[i]";
-			this->Column3->Name = L"Column3";
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this->dataGridViewTextBoxColumn1->HeaderText = L"v\'^[i]";
-			this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
-			// 
-			// Column4
-			// 
-			this->Column4->HeaderText = L"h[i]";
-			this->Column4->Name = L"Column4";
-			// 
-			// Column5
-			// 
-			this->Column5->HeaderText = L"v\'^[i]-v\'[i]";
-			this->Column5->Name = L"Column5";
-			// 
-			// Column6
-			// 
-			this->Column6->HeaderText = L"ОЛП";
-			this->Column6->Name = L"Column6";
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this->dataGridViewTextBoxColumn2->HeaderText = L"C1";
-			this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this->dataGridViewTextBoxColumn3->HeaderText = L"C2";
-			this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
 			// 
 			// tabPage9
 			// 
@@ -1257,63 +1294,37 @@ private: System::Windows::Forms::WebBrowser^ webBrowser2;
 
 		}
 #pragma endregion
-private: System::Void startButton_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) 
-{
-	try
-	{
-		MyTable* table = rk4VariableStep
-		(
-			{ &function1,&function2 },
-			Convert::ToDouble(x0TextBox->Text),/*x0*/
-			{ Convert::ToDouble(u00TtextBox->Text),Convert::ToDouble(u01TextBox->Text) },/*(u0,u'0)*/
-			{ Convert::ToDouble(cTextBox->Text),Convert::ToDouble(kTextBox->Text),Convert::ToDouble(mTextBox->Text) },
-			Convert::ToDouble(hTextBox->Text),
-			Convert::ToDouble(xTextBox->Text),
-			Convert::ToDouble(epsTextBox->Text),
-			Convert::ToDouble(epsGrTextBox->Text)
-		);
-
-		outVDataGridView->Rows->Clear();
-		table->printTable1(outVDataGridView);
-
-		vector<double> Xi = table->getColumn("Xi");
-		vector<double> Vi1 = table->getColumn("Vi1");
-		vector<double> Vi2 = table->getColumn("Vi2");
-
-		uxChart->Series[0]->Points->Clear();
-		ushxChart->Series[0]->Points->Clear();
-		vvChart->Series[0]->Points->Clear();
-
-		for(int i=0;i<Xi.size();i++)
-			uxChart->Series[0]->Points->AddXY(Xi[i],Vi1[i]);
-
-		for (int i = 0; i < Xi.size(); i++)
-			ushxChart->Series[0]->Points->AddXY(Xi[i], Vi2[i]);
-
-		for (int i = 0; i < Xi.size(); i++)
-			vvChart->Series[0]->Points->AddXY(Vi1[i], Vi2[i]);
-
-		spravka(table, spravkaRichTextBox, Convert::ToDouble(xTextBox->Text));
-	}
-	catch (FormatException^ exc)
-	{
-		MessageBox::Show(Convert::ToString(exc->Message));
-	}
-}
 private: System::Void startButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	try
 	{
-		MyTable* table = rk4VariableStep
-		(
-			{ &function1,&function2 },
-			Convert::ToDouble(x0TextBox->Text),/*x0*/
-			{ Convert::ToDouble(u00TtextBox->Text),Convert::ToDouble(u01TextBox->Text) },/*(u0,u'0)*/
-			{ Convert::ToDouble(cTextBox->Text),Convert::ToDouble(kTextBox->Text),Convert::ToDouble(mTextBox->Text) },
-			Convert::ToDouble(hTextBox->Text),
-			Convert::ToDouble(xTextBox->Text),
-			Convert::ToDouble(epsTextBox->Text),
-			Convert::ToDouble(epsGrTextBox->Text)
-		);
+		MyTable* table;
+
+		if (constStepCheckBox->Checked)
+		{
+			table = rk4ConstStep
+			(
+				{ &function1,&function2 },
+				Convert::ToDouble(x0TextBox->Text),/*x0*/
+				{ Convert::ToDouble(u00TtextBox->Text),Convert::ToDouble(u01TextBox->Text) },/*(u0,u'0)*/
+				{ Convert::ToDouble(cTextBox->Text),Convert::ToDouble(kTextBox->Text),Convert::ToDouble(mTextBox->Text) },
+				Convert::ToDouble(nTextBox->Text),
+				Convert::ToDouble(xTextBox->Text)
+			);
+		}
+		else
+		{
+			table = rk4VariableStep
+			(
+				{ &function1,&function2 },
+				Convert::ToDouble(x0TextBox->Text),/*x0*/
+				{ Convert::ToDouble(u00TtextBox->Text),Convert::ToDouble(u01TextBox->Text) },/*(u0,u'0)*/
+				{ Convert::ToDouble(cTextBox->Text),Convert::ToDouble(kTextBox->Text),Convert::ToDouble(mTextBox->Text) },
+				Convert::ToDouble(hTextBox->Text),
+				Convert::ToDouble(xTextBox->Text),
+				Convert::ToDouble(epsTextBox->Text),
+				Convert::ToDouble(epsGrTextBox->Text)
+			);
+		}
 
 		outVDataGridView->Rows->Clear();
 		table->printTable1(outVDataGridView);

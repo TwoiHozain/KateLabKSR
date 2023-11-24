@@ -41,6 +41,35 @@ vector<double> rk4Step(const vector<double(*)(double x, const vector<double>& v,
 	return res;
 }
 
+MyTable* rk4ConstStep(const vector<double(*)(double x, const vector<double>& v, const vector<double>& consts)>& f, double x0, const vector<double>& v, const vector<double>& consts, double N, double xLast)
+{
+	MyTable* table = new MyTable(v.size());
+
+	size_t iter = 0;
+	double xi = x0;
+	vector<double> tmp;
+	vector<double> vi = v;
+	vector<double> v2i = v;
+
+	double h = (xLast - x0) / N;
+
+	table->addRow(xi, vi, v2i, h, 0.0, 0.0);
+
+	for (int i = 1; i <= N && i < MAX_ITER; i++)
+	{
+		tmp = rk4Step(f, xi, vi, consts, h / 2.0);
+		v2i = rk4Step(f, xi + h / 2.0, tmp, consts, h / 2.0);
+
+		vi = rk4Step(f, xi, vi, consts, h);
+
+		xi = x0 + (xLast - x0) / N * i;
+
+		table->addRow(xi, vi, v2i, h, 0.0, 0.0);
+	}
+
+	return table;
+}
+
 MyTable* rk4VariableStep(const vector<double(*)(double x, const vector<double>& v, const vector<double>& consts)>& f, double x0, const vector<double>& v, const vector<double>& consts, double h, double xLast, double eps, double epsGr)
 {
 	MyTable* table = new MyTable(v.size());
