@@ -72,7 +72,7 @@ public:
 			columns[i].push_back(v2[j]);
 
 		for (int j = 0; j < v.size(); i++, j++)
-			columns[i].push_back(v[j] - v2[j]);
+			columns[i].push_back(v2[j] - v[j]);
 
 		for (int j = 0; j < v.size(); i++, j++)
 			columns[i].push_back(16.0 * (v2[j] - v[j]) / 15.0);
@@ -88,13 +88,22 @@ public:
 		columns.push_back(values);
 	}
 
-	void printTable(System::Windows::Forms::DataGridView^ dataGridView)
+	void printTable1(System::Windows::Forms::DataGridView^ dataGridView)
 	{
 		System::Data::DataTable^ dataTable = gcnew System::Data::DataTable();
 
 		size_t size = columns[0].size();
 		for(int i=0;i<size;i++)
-			dataGridView->Rows->Add(i,columns[0][i], columns[1][i], columns[2][i], columns[9][i], columns[10][i], columns[11][i]);
+			dataGridView->Rows->Add(i,columns[0][i], columns[1][i], columns[3][i], columns[9][i], columns[5][i], columns[7][i], columns[10][i], columns[11][i]);
+	}
+
+	void printTable2(System::Windows::Forms::DataGridView^ dataGridView)
+	{
+		System::Data::DataTable^ dataTable = gcnew System::Data::DataTable();
+
+		size_t size = columns[0].size();
+		for (int i = 0; i < size; i++)
+			dataGridView->Rows->Add(i, columns[0][i], columns[2][i], columns[4][i], columns[9][i], columns[6][i], columns[8][i], columns[10][i], columns[11][i]);
 	}
 
 	std::vector<double> getColumn(std::string columnName)
@@ -118,8 +127,8 @@ void spravka(MyTable* res, System::Windows::Forms::RichTextBox^ out, double b)
 	size_t size = res->getColumn("Xi").size(), maxHind = 0, minHind = 0;
 	double maxOLP1 = -1.0, maxOLP2 = -1.0, maxH = res->getColumn("h")[0], minH = res->getColumn("h")[0];
 
-	out->Text = out->Text + "Число удвоений шага:  " + System::Convert::ToString(res->getColumn("C1")[size-1]) + "\n";
-	out->Text = out->Text + "Число делений шага:  " + System::Convert::ToString(res->getColumn("C2")[size - 1]) + "\n";
+	out->Text = out->Text + "Число удвоений шага:  " + System::Convert::ToString(res->getColumn("C2")[size-1]) + "\n";
+	out->Text = out->Text + "Число делений шага:  " + System::Convert::ToString(res->getColumn("C1")[size - 1]) + "\n";
 	out->Text = out->Text + "Общее число шагов:  " + System::Convert::ToString(size) + "\n";
 
 	std::vector<double> OLP1 = res->getColumn("OLP1");
