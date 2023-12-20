@@ -5,8 +5,6 @@
 
 #include "MyTable.hpp"
 
-#define MAX_ITER 10000
-
 using namespace std;
 
 vector<double> rk4Step(const vector<double(*)(double x, const vector<double>& v, const vector<double>& consts)>& f, double x, const vector<double>& v, const vector<double>& consts, double h)
@@ -41,7 +39,7 @@ vector<double> rk4Step(const vector<double(*)(double x, const vector<double>& v,
 	return res;
 }
 
-MyTable* rk4ConstStep(const vector<double(*)(double x, const vector<double>& v, const vector<double>& consts)>& f, double x0, const vector<double>& v, const vector<double>& consts, double N, double xLast)
+MyTable* rk4ConstStep(const vector<double(*)(double x, const vector<double>& v, const vector<double>& consts)>& f, double x0, const vector<double>& v, const vector<double>& consts, double N, double xLast, size_t maxIter)
 {
 	MyTable* table = new MyTable(v.size());
 
@@ -55,7 +53,7 @@ MyTable* rk4ConstStep(const vector<double(*)(double x, const vector<double>& v, 
 
 	table->addRow(xi, vi, v2i, h, 0.0, 0.0);
 
-	for (int i = 1; i <= N && i < MAX_ITER; i++)
+	for (int i = 1; i <= N && i < maxIter; i++)
 	{
 		tmp = rk4Step(f, xi, vi, consts, h / 2.0);
 		v2i = rk4Step(f, xi + h / 2.0, tmp, consts, h / 2.0);
@@ -70,7 +68,7 @@ MyTable* rk4ConstStep(const vector<double(*)(double x, const vector<double>& v, 
 	return table;
 }
 
-MyTable* rk4VariableStep(const vector<double(*)(double x, const vector<double>& v, const vector<double>& consts)>& f, double x0, const vector<double>& v, const vector<double>& consts, double h, double xLast, double eps, double epsGr)
+MyTable* rk4VariableStep(const vector<double(*)(double x, const vector<double>& v, const vector<double>& consts)>& f, double x0, const vector<double>& v, const vector<double>& consts, double h, double xLast, double eps, double epsGr,size_t maxIter)
 {
 	MyTable* table = new MyTable(v.size());
 
@@ -83,7 +81,7 @@ MyTable* rk4VariableStep(const vector<double(*)(double x, const vector<double>& 
 
 	table->addRow(xi, vi, v2i, h, 0.0, 0.0);
 
-	while ((xi + h) <= xLast && iter < MAX_ITER)
+	while ((xi + h) <= xLast && iter < maxIter)
 	{
 		v2i = rk4Step(f, xi, vi, consts, h / 2.0);
 		v2i = rk4Step(f, xi + h / 2.0, v2i, consts, h / 2.0);
@@ -100,8 +98,8 @@ MyTable* rk4VariableStep(const vector<double(*)(double x, const vector<double>& 
 
 		if (maxS < eps / 32.0)
 		{
-			xi = xi + h;
 			h = h * 2.0;
+			xi = xi + h;
 
 			C2 += 1.0;
 

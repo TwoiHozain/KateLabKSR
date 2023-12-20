@@ -122,31 +122,52 @@ public:
 
 void spravka(MyTable* res, System::Windows::Forms::RichTextBox^ out, double b)
 {
-	out->Text = "";
-
 	size_t size = res->getColumn("Xi").size(), maxHind = 0, minHind = 0;
-	double maxOLP1 = -1.0, maxOLP2 = -1.0, maxH = res->getColumn("h")[0], minH = res->getColumn("h")[0];
+
+	out->Text = out->Text + "Результаты счета:\n";
+	out->Text = out->Text + "N = "+ res->getColumn("Vi1").size() + "\n";
+	out->Text = out->Text + "Расстояние до правой границы счета: " + System::Convert::ToString(b - System::Convert::ToDouble(res->getColumn("Xi")[size - 1])) + "\n";
+	out->Text = out->Text + "Последний шаг метода: " + res->getColumn("h")[size - 2] + "\n";
+	out->Text = out->Text + "Последяя найденная точка численной траектории: " + res->getColumn("Xi")[size - 1] + "\n";
+
+	size_t OLP1ind = 0, OLP2ind = 0;
+	double maxH = res->getColumn("h")[0], minH = res->getColumn("h")[0];
 
 	out->Text = out->Text + "Число удвоений шага:  " + System::Convert::ToString(res->getColumn("C2")[size-1]) + "\n";
 	out->Text = out->Text + "Число делений шага:  " + System::Convert::ToString(res->getColumn("C1")[size - 1]) + "\n";
-	out->Text = out->Text + "Общее число шагов:  " + System::Convert::ToString(size) + "\n";
 
 	std::vector<double> OLP1 = res->getColumn("OLP1");
 	std::vector<double> OLP2 = res->getColumn("OLP2");
 	std::vector<double> h = res->getColumn("h");
 
 	for (int i = 0; i < size; i++)
-		if (maxOLP1 < abs(OLP1[i]))
-			maxOLP1 = abs(OLP1[i]);
+		if (abs(OLP1[i]) > abs(OLP1[OLP1ind]))
+			OLP1ind = i;
 
 	for (int i = 0; i < size; i++)
-		if (maxOLP2 < abs(OLP2[i]))
-			maxOLP2 = abs(OLP2[i]);
+		if (abs(OLP2[i]) > abs(OLP2[OLP2ind]))
+			OLP2ind = i;
 
-	if(OLP1>=OLP2)
-		out->Text = out->Text + "Макс. |ОЛП|:  " + System::Convert::ToString(maxOLP1) + "\n";
+	if (abs(OLP1[OLP1ind]) > abs(OLP2[OLP2ind]))
+		out->Text = out->Text + "Макс. |ОЛП|:  " + System::Convert::ToString(abs(OLP1[OLP1ind])) + " при x =" + res->getColumn("Xi")[OLP1ind] + "\n";
 	else
-		out->Text = out->Text + "Макс. |ОЛП|:  " + System::Convert::ToString(maxOLP2) + "\n";
+		out->Text = out->Text + "Макс. |ОЛП|:  " + System::Convert::ToString(abs(OLP2[OLP2ind])) + " при x =" + res->getColumn("Xi")[OLP2ind] + "\n";
+
+	OLP1ind = 0;
+	OLP2ind = 0;
+
+	for (int i = 1; i < size; i++)
+		if (abs(OLP1[i]) < abs(OLP1[OLP1ind]))
+			OLP1ind = i;
+
+	for (int i = 1; i < size; i++)
+		if (abs(OLP2[i]) < abs(OLP2[OLP2ind]))
+			OLP2ind = i;
+
+	if (abs(OLP1[OLP1ind]) < abs(OLP2[OLP2ind]))
+		out->Text = out->Text + "Мин. |ОЛП|:  " + System::Convert::ToString(abs(OLP1[OLP1ind])) + " при x =" + res->getColumn("Xi")[OLP1ind] + "\n";
+	else
+		out->Text = out->Text + "Мин. |ОЛП|:  " + System::Convert::ToString(abs(OLP2[OLP2ind])) + " при x =" + res->getColumn("Xi")[OLP2ind]+"\n";
 
 	for (int i = 1; i < size; i++)
 	{
@@ -163,6 +184,6 @@ void spravka(MyTable* res, System::Windows::Forms::RichTextBox^ out, double b)
 		}
 	}
 
-	out->Text = out->Text + "Максимальный шаг:  " + System::Convert::ToString(res->getColumn("h")[maxHind]) + "\n";
-	out->Text = out->Text + "Минимальный шаг:  " + System::Convert::ToString(res->getColumn("h")[minHind]) + "\n";
+	out->Text = out->Text + "Максимальный шаг:  " + System::Convert::ToString(res->getColumn("h")[maxHind]) + " при x = "+ System::Convert::ToString(res->getColumn("Xi")[maxHind])+"\n";
+	out->Text = out->Text + "Минимальный шаг:  " + System::Convert::ToString(res->getColumn("h")[minHind]) + " при x = " + System::Convert::ToString(res->getColumn("Xi")[minHind]) + "\n";
 }
